@@ -1,0 +1,183 @@
+@import url(icons.css);
+:root{
+    --Very-Dar-Grayish-Blue: hsl(217, 19%, 35%);
+--Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+--Grayish-Blue: hsl(212, 23%, 69%);
+--ight-Grayish-Blue: hsl(210, 46%, 95%);
+/***/
+--ff:'Manrope', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+margin: 0;
+font-family: var(--ff);
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--ight-Grayish-Blue);
+}
+.main-box{
+
+    display: flex;
+border-radius: 10px;
+height: 250px;
+max-width: 635px;
+border-radius: 10px;
+
+
+}
+.right-box{
+    padding: 60px;
+    background-color: white;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    border-radius:0px 10px 10px 0px;
+    padding-right: 40px;
+    padding-left: 34px;
+    transform: scale(1);
+}
+.icon-icon-share{
+    border: 0;
+    background-color: var(--ight-Grayish-Blue);
+    cursor: pointer;
+border-radius: 50%;
+    padding: 7px;
+}
+.icon-icon-share:active{    
+    transform: scale(0.8);
+}
+.content{
+    background-color: var(--Very-Dar-Grayish-Blue);
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 22px;
+    border-radius: 4px;
+    position: absolute;
+    right: -73px;
+    bottom: 56px;
+    font-size: 15px;
+    transition: scale 450ms;
+    transform-origin: bottom;
+ 
+}
+.scale{
+    scale: 0;
+}
+.content span:nth-child(1){
+    letter-spacing: 4px ;
+    font-size: 10px;
+    color: var(--Grayish-Blue);
+}
+.content::before{
+    content: "";
+    height: 0px;
+    border-top: 14px solid var(--Very-Dar-Grayish-Blue);
+    border-right: 14px solid transparent;
+    border-left: 14px solid transparent;
+    position: absolute;
+    bottom: -14px;
+}
+
+.right-box img{
+    width: 20px;
+}
+.flex{
+    display: flex;
+    position: relative;
+    gap: 20px;
+    justify-content: space-between;
+
+}
+.mini-flex p:nth-child(1){
+    font-weight: 900;
+    margin-bottom: 2px;
+}
+.mini-flex p:nth-child(2){
+    color: var(--Grayish-Blue);
+}
+.right-box>p{
+    line-height: 1.5;
+    color: var(--Desaturated-Dark-Blue);
+}
+.flex img{
+ border-radius: 50%;
+ width: 29px;
+}
+.main-box .img{
+    min-width: 248px;
+    display: flex;
+    border-radius: 10px 0px 0px 10px;
+    overflow: hidden;
+}
+.icon-icon-facebook,
+.icon-icon-twitter,
+.icon-icon-pinterest{
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+}
+.icon-icon-facebook:active,
+.icon-icon-twitter:active,
+.icon-icon-pinterest:active{
+    transform:scale(0.9);
+}
+.flexo{
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 991.98px){
+    body{
+        padding: 20px;
+    }
+    .main-box{
+        display: flex;
+        flex-direction: column;
+        height: auto; 
+        overflow: hidden;   
+    }
+
+    .img img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .right-box{
+        padding: 20px 20px 20px 20px;
+        position: relative;
+        border-radius: 0px;
+    
+    }
+    .content{
+        position: absolute;
+        width: 146%;
+        height: 63px;
+        right: -38px;
+        bottom: -20px;
+        transform-origin: right;
+
+    }
+    .content::before{
+        display: none;
+    }
+    .icon-icon-share{
+z-index: 1;
+    }
+    .color{
+        background-color: red;
+    }
+    .main-box .img{
+       border-radius: 0px;
+    }
+
+    
+}
